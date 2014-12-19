@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
@@ -63,6 +63,24 @@ class ViewController: UIViewController {
         hourLabel.text = hourStr
         minuteLabel.text = minuteStr
         secondLabel.text = secondStr
+    }
+    
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func tapGesture(sender: AnyObject) {
+        println("ooo")
+        let controller: UINavigationController! = self.storyboard?.instantiateViewControllerWithIdentifier("NavigationController") as? UINavigationController
+        controller.modalPresentationStyle = .Custom
+        controller.transitioningDelegate = self
+        self.presentViewController(controller, animated: true, completion: {
+            
+        })
+    }
+    
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController!, sourceViewController source: UIViewController) -> UIPresentationController? {
+        
+        return CustomPresentationController(presentedViewController: presented, presentingViewController: presenting)
     }
 }
 extension UIColor {

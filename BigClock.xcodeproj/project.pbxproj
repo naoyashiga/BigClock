@@ -13,6 +13,9 @@
 		9A8330901A05A61100902D6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A83308F1A05A61100902D6C /* Images.xcassets */; };
 		9A8330931A05A61100902D6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8330911A05A61100902D6C /* LaunchScreen.xib */; };
 		9A83309F1A05A61100902D6C /* BigClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A83309E1A05A61100902D6C /* BigClockTests.swift */; };
+		9AD78D401A43A00B00505821 /* ColorSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD78D3F1A43A00B00505821 /* ColorSettingViewController.swift */; };
+		9AD78D421A43A30B00505821 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD78D411A43A30B00505821 /* CustomCell.swift */; };
+		9AEC47E31A3F03D7006CD9BA /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC47E21A3F03D7006CD9BA /* CustomPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		9A8330981A05A61100902D6C /* BigClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A83309D1A05A61100902D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A83309E1A05A61100902D6C /* BigClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigClockTests.swift; sourceTree = "<group>"; };
+		9AD78D3F1A43A00B00505821 /* ColorSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSettingViewController.swift; sourceTree = "<group>"; };
+		9AD78D411A43A30B00505821 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		9AEC47E21A3F03D7006CD9BA /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				9A83308F1A05A61100902D6C /* Images.xcassets */,
 				9A8330911A05A61100902D6C /* LaunchScreen.xib */,
 				9A8330861A05A61100902D6C /* Supporting Files */,
+				9AEC47E21A3F03D7006CD9BA /* CustomPresentationController.swift */,
+				9AD78D3F1A43A00B00505821 /* ColorSettingViewController.swift */,
+				9AD78D411A43A30B00505821 /* CustomCell.swift */,
 			);
 			path = BigClock;
 			sourceTree = "<group>";
@@ -214,6 +223,9 @@
 			files = (
 				9A83308B1A05A61100902D6C /* ViewController.swift in Sources */,
 				9A8330891A05A61100902D6C /* AppDelegate.swift in Sources */,
+				9AD78D421A43A30B00505821 /* CustomCell.swift in Sources */,
+				9AD78D401A43A00B00505821 /* ColorSettingViewController.swift in Sources */,
+				9AEC47E31A3F03D7006CD9BA /* CustomPresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
