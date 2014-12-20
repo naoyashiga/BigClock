@@ -18,7 +18,7 @@ class ColorSettingViewController: UICollectionViewController,UICollectionViewDat
         UIColor.hexStr("9b59b6", alpha: 1),
         UIColor.hexStr("e67e22", alpha: 1),
         UIColor.hexStr("e74c3c", alpha: 1),
-        UIColor.hexStr("E08283", alpha: 1),
+        UIColor.hexStr("F1A9A0", alpha: 1),
     ]
 
     override func viewDidLoad() {
