@@ -69,7 +69,6 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     }
     
     @IBAction func tapGesture(sender: AnyObject) {
-        println("ooo")
         let controller: UINavigationController! = self.storyboard?.instantiateViewControllerWithIdentifier("NavigationController") as? UINavigationController
         controller.modalPresentationStyle = .Custom
         controller.transitioningDelegate = self

@@ -9,7 +9,8 @@
 import UIKit
 
 class CustomCell: UICollectionViewCell {
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var colorPalette: UIView!
+    
     override init(frame: CGRect){
         super.init(frame: frame)
     }

@@ -11,6 +11,14 @@ import UIKit
 let reuseIdentifier = "Cell"
 
 class ColorSettingViewController: UICollectionViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+    let colors:[UIColor] = [
+        UIColor.hexStr("000000", alpha: 1),
+        UIColor.hexStr("2ecc71", alpha: 1),
+        UIColor.hexStr("9b59b6", alpha: 1),
+        UIColor.hexStr("e67e22", alpha: 1),
+        UIColor.hexStr("e74c3c", alpha: 1),
+        UIColor.hexStr("60DFE5", alpha: 1),
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +57,15 @@ class ColorSettingViewController: UICollectionViewController,UICollectionViewDat
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return 10
+        return colors.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CustomCell
-        cell.title.text = "aaa"
+        
+        cell.colorPalette.backgroundColor = colors[indexPath.row]
+        println(indexPath.row)
+//        cell.colorPalette.layer.cornerRadius = 50.0
     
         // Configure the cell
     

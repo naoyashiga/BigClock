@@ -20,7 +20,7 @@ class CustomPresentationController: UIPresentationController {
         self.overlay = UIView(frame: containerView.bounds)
         self.overlay.gestureRecognizers = [UITapGestureRecognizer(target: self, action: "overlayDidTouch:")]
         self.overlay.alpha = 0.0
-        self.overlay.backgroundColor = UIColor.hexStr("60DFE5", alpha: 1)
+        self.overlay.backgroundColor = UIColor.hexStr("000000", alpha: 1)
         containerView.insertSubview(self.overlay, atIndex: 0)
         
         //トランジションを実行
@@ -49,7 +49,7 @@ class CustomPresentationController: UIPresentationController {
     
     //子のコンテナのサイズを返す
     override func sizeForChildContentContainer(container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-        return CGSize(width: parentSize.width, height: parentSize.height / 2)
+        return CGSize(width: parentSize.width, height: parentSize.height / 4)
     }
     
     //呼び出し先のVCのFrameを返す
