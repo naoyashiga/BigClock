@@ -4,27 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Color Setting-->
-        <scene sceneID="3EC-ea-crM">
-            <objects>
-                <tableViewController id="UGB-4w-mRB" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Yu4-Zn-79G">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="UGB-4w-mRB" id="ZZ0-nm-njE"/>
-                            <outlet property="delegate" destination="UGB-4w-mRB" id="c4H-rp-zve"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Color Setting" id="x0s-SH-uyX">
-                        <barButtonItem key="leftBarButtonItem" title="close" id="epj-vD-H93"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Tz-eP-JOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2298" y="428.25"/>
-        </scene>
         <!--Color Setting View Controller-->
         <scene sceneID="OYX-SY-MCx">
             <objects>
@@ -34,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97733976403061229" green="0.97733976403061229" blue="0.97733976403061229" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8jm-lR-4G3">
-                            <size key="itemSize" width="117" height="125"/>
+                            <size key="itemSize" width="399" height="88"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -44,14 +23,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="117" height="125"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="399" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ste-8t-os8">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="17" y="19" width="82" height="88"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="399" height="94"/>
                                             </variation>
                                         </view>
                                     </subviews>
@@ -78,15 +57,17 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="NNr-8B-Cax"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yn6-wA-mLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513.5" y="72.75"/>
+            <point key="canvasLocation" x="1512" y="72.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GsW-Fl-NQF">
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" navigationBarHidden="YES" id="K8I-xP-NbH" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ECe-VO-lQf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -288,6 +269,7 @@
                             <outletCollection property="gestureRecognizers" destination="KjZ-7s-SDX" appends="YES" id="Slq-Gs-8ME"/>
                         </connections>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="hourLabel" destination="tIM-OY-wvQ" id="fDY-Kj-Po5"/>

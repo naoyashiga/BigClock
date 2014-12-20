@@ -18,6 +18,12 @@ class ColorSettingViewController: UICollectionViewController,UICollectionViewDat
         UIColor.hexStr("e67e22", alpha: 1),
         UIColor.hexStr("e74c3c", alpha: 1),
         UIColor.hexStr("60DFE5", alpha: 1),
+        UIColor.hexStr("DB0A5B", alpha: 1),
+        UIColor.hexStr("F62459", alpha: 1),
+        UIColor.hexStr("D2527F", alpha: 1),
+        UIColor.hexStr("E26A6A", alpha: 1),
+        UIColor.hexStr("E08283", alpha: 1),
+        UIColor.hexStr("F64747", alpha: 1),
     ]
 
     override func viewDidLoad() {
@@ -64,7 +70,6 @@ class ColorSettingViewController: UICollectionViewController,UICollectionViewDat
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CustomCell
         
         cell.colorPalette.backgroundColor = colors[indexPath.row]
-        println(indexPath.row)
 //        cell.colorPalette.layer.cornerRadius = 50.0
     
         // Configure the cell
@@ -81,12 +86,13 @@ class ColorSettingViewController: UICollectionViewController,UICollectionViewDat
     }
     */
 
-    /*
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        
+        self.presentingViewController?.view.backgroundColor = colors[indexPath.row]
+        println(indexPath.row)
         return true
     }
-    */
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
@@ -102,5 +108,10 @@ class ColorSettingViewController: UICollectionViewController,UICollectionViewDat
     
     }
     */
-
+    func collectionView(collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat{
+            //マージンをなくす
+            return 0.0;
+    }
 }

@@ -81,6 +81,10 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         
         return CustomPresentationController(presentedViewController: presented, presentingViewController: presenting)
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 extension UIColor {
     class func hexStr (var hexStr : NSString, var alpha : CGFloat) -> UIColor {
