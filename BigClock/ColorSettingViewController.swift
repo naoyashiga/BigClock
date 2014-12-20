@@ -12,18 +12,13 @@ let reuseIdentifier = "Cell"
 
 class ColorSettingViewController: UICollectionViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     let colors:[UIColor] = [
+        UIColor.hexStr("60dfe5", alpha: 1),
         UIColor.hexStr("000000", alpha: 1),
         UIColor.hexStr("2ecc71", alpha: 1),
         UIColor.hexStr("9b59b6", alpha: 1),
         UIColor.hexStr("e67e22", alpha: 1),
         UIColor.hexStr("e74c3c", alpha: 1),
-        UIColor.hexStr("60DFE5", alpha: 1),
-        UIColor.hexStr("DB0A5B", alpha: 1),
-        UIColor.hexStr("F62459", alpha: 1),
-        UIColor.hexStr("D2527F", alpha: 1),
-        UIColor.hexStr("E26A6A", alpha: 1),
         UIColor.hexStr("E08283", alpha: 1),
-        UIColor.hexStr("F64747", alpha: 1),
     ]
 
     override func viewDidLoad() {
@@ -68,11 +63,7 @@ class ColorSettingViewController: UICollectionViewController,UICollectionViewDat
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CustomCell
-        
         cell.colorPalette.backgroundColor = colors[indexPath.row]
-//        cell.colorPalette.layer.cornerRadius = 50.0
-    
-        // Configure the cell
     
         return cell
     }
@@ -90,7 +81,6 @@ class ColorSettingViewController: UICollectionViewController,UICollectionViewDat
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         
         self.presentingViewController?.view.backgroundColor = colors[indexPath.row]
-        println(indexPath.row)
         return true
     }
 

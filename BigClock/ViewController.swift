@@ -14,8 +14,8 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     @IBOutlet weak var secondLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor.hexStr("60DFE5", alpha: 1)
-        self.view.backgroundColor = UIColor.hexStr("000000", alpha: 1)
+        self.view.backgroundColor = UIColor.hexStr("60DFE5", alpha: 1)
+//        self.view.backgroundColor = UIColor.hexStr("000000", alpha: 1)
         
         getTime()
         // 一秒ごとにupdateを呼び出す
@@ -65,16 +65,19 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         secondLabel.text = secondStr
     }
     
-    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
-    }
     
     @IBAction func tapGesture(sender: AnyObject) {
         let controller: UINavigationController! = self.storyboard?.instantiateViewControllerWithIdentifier("NavigationController") as? UINavigationController
         controller.modalPresentationStyle = .Custom
         controller.transitioningDelegate = self
-        self.presentViewController(controller, animated: true, completion: {
-            
-        })
+        
+        let sw = self.view.bounds.width
+        //portraitだけタップできる
+        if(sw < 500){
+            self.presentViewController(controller, animated: true, completion: {
+                
+            })
+        }
     }
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController!, sourceViewController source: UIViewController) -> UIPresentationController? {
