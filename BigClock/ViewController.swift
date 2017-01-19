@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
+    var audioPlayer = AVAudioPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.hexStr("60DFE5", alpha: 1)
 //        self.view.backgroundColor = UIColor.hexStr("000000", alpha: 1)
         
         getTime()
+        
+        //サウンド準備
+        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop", ofType: "aiff")!)
+        var error:NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
         // 一秒ごとにupdateを呼び出す
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
     }
@@ -27,6 +34,8 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     }
     
     func update(){
+        //サウンド再生
+        audioPlayer.play()
         getTime()
     }
     
